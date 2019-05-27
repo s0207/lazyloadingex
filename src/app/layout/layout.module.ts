@@ -2,19 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LayoutRoutingModule } from './layout-routing.module';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { CustomerComponent } from './customer/customer.component';
+import { OrderComponent } from './order/order.component';
 import { LayoutComponent } from './layout.component';
-import { CustomerModule } from './components/customer/customer.module';
-import { OrderModule } from './components/order/order.module';
-
-
+import { SidebarComponent } from 'src - Copy/app/layout/components/sidebar/sidebar.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    LayoutRoutingModule,
-    CustomerModule,
-    OrderModule
+    LayoutRoutingModule
   ],
   declarations: [LayoutComponent,SidebarComponent]
 })

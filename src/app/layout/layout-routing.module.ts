@@ -3,16 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
 
 const routes: Routes = [
-  // { path: '', component: LayoutComponent, redirectTo: 'layout' },
   {
-    path: '', 
+    path: '',
     component: LayoutComponent,
-    children:[
-      { path: '', redirectTo: 'customer'},
-      { path: 'customer', loadChildren: './components/customer/customer.module#CustomerModule' },
-      { path: 'order', loadChildren: './components/order/order.module#OrderModule' },
+    // redirectTo: 'customer'
+    children: [
+      { path: '', redirectTo: 'customer', pathMatch: 'prefix' },
+      { path: 'customer', loadChildren: './customer/customer.module#CustomerModule' },
+      { path: 'order', loadChildren: './order/order.module#OrderModule' }
     ]
-  }
+  },
+  // { path: 'customer', loadChildren: './customer/customer.module#CustomerModule' },
+  // { path: 'order', loadChildren: './order/order.module#TransactionModule'}
 
 ];
 
