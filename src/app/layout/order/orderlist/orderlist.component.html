@@ -21,10 +21,10 @@
         <th scope="col">Ship Country</th>
       </tr>
     </thead>
-    <tbody  >
+    <tbody [routerLink]="['../add/1']" >
       <tr *ngFor="let ref of orderList; index as i">
 
-        <td [routerLink]="['../add/1']">
+        <td >
           {{ref.Id}}
         </td>
 

@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
-import { LoginComponent } from 'src - Copy/app/login/login.component';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [

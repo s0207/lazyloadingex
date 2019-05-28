@@ -5,7 +5,8 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { CustomerComponent } from './customer/customer.component';
 import { OrderComponent } from './order/order.component';
 import { LayoutComponent } from './layout.component';
-import { SidebarComponent } from 'src - Copy/app/layout/components/sidebar/sidebar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+
 
 @NgModule({
   imports: [
@@ -15,3 +16,4 @@ import { SidebarComponent } from 'src - Copy/app/layout/components/sidebar/sideb
   declarations: [LayoutComponent,SidebarComponent]
 })
 export class LayoutModule { }
+       
