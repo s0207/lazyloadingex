@@ -9,9 +9,9 @@ import { ApicallService } from 'src/app/services/apicall.service';
 export class OrderlistComponent implements OnInit {
 
   changeText: boolean;
-  
+  filter:any;
+  p: number = 1;
   constructor(private service: ApicallService) {
-    this.changeText = false;
    }
 
   ngOnInit() {

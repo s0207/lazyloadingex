@@ -2,6 +2,16 @@
   <i class="fa fa-fw fa-dashboard"></i>&nbsp;
   <span>Customer</span>
 </a> -->
+<div class="d-flex flex-wrap bg-light">
+    <h1>Order List</h1>
+  </div>
+<div class="d-flex flex-wrap bg-light">
+  <form class="form-inline">
+    <label for="text" class="mr-sm-2">Search:</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="text" name="filter" [(ngModel)]="filter">
+  </form>
+</div>
+
 <div style="overflow-x:auto;">
   <table class="table table-striped table-bordered ">
     <thead>
@@ -21,8 +31,8 @@
         <th scope="col">Ship Country</th>
       </tr>
     </thead>
-    <tbody [routerLink]="['../add/1']" >
-      <tr *ngFor="let ref of orderList; index as i">
+    <tbody>
+      <tr *ngFor="let ref of orderList | filter:filter | paginate: { itemsPerPage: 5, currentPage: p }; index as i">
 
         <td >
           {{ref.Id}}
@@ -80,4 +90,5 @@
       </tr>
     </tbody>
   </table>
+  <pagination-controls style="width:1000%" (pageChange)="p = $event"></pagination-controls>
 </div>

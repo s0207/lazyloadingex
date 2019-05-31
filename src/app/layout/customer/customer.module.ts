@@ -5,11 +5,17 @@ import { CustomerRoutingModule } from './customer-routing.module';
 import { CustomerComponent } from './customer.component';
 import { CustomerlistComponent } from './customerlist/customerlist.component';
 import { ViewcustomerComponent } from './viewcustomer/viewcustomer.component';
-
+import { FormsModule } from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+ 
 @NgModule({
   imports: [
     CommonModule,
-    CustomerRoutingModule
+    CustomerRoutingModule,
+    FormsModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule
   ],
   declarations: [CustomerComponent, CustomerlistComponent, ViewcustomerComponent]
 })

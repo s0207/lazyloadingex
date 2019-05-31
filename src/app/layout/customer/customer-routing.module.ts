@@ -19,7 +19,7 @@ const routes: Routes = [
         component: CustomerlistComponent
       },
       {
-        path: 'view',
+        path: 'view/:id',
         component: ViewcustomerComponent
       }
     ]
